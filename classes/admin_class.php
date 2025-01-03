@@ -7,11 +7,11 @@ class Admin_Class
 
 	public function __construct()
 	{ 
-        	$host_name='localhost';
-		$user_name='root';
-		$password='';
+        	$host_name='etmsfp.mysql.database.azure.com';
+		$user_name='etmsfp';
+		$password='Qwerty12345';
 		$db_name='etmsh';
-		$port='3308';
+		$port='3306';
 
 		try{
 			$connection=new PDO("mysql:host={$host_name}; dbname={$db_name}", $user_name,  $password, $port);
