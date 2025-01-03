@@ -5,21 +5,43 @@ class Admin_Class
 
 /* -------------------------set_database_connection_using_PDO---------------------- */
 
-	public function __construct()
-	{ 
-        	$host_name='etmsfp.mysql.database.azure.com';
-		$user_name='etmsfp';
-		$password='Qwerty12345';
-		$db_name='etmsh';
-		$port='3306';
+	    public function __construct()
+    {
+        $host_name = 'etmsfp.mysql.database.azure.com';
+        $user_name = 'etmsfp';
+        $password = 'Qwerty12345';
+        $db_name = 'etmsh';
+        $port = '3306';
 
-		try{
-			$connection=new PDO("mysql:host={$host_name}; dbname={$db_name}", $user_name,  $password, $port);
-			$this->db = $connection; // connection established
-		} catch (PDOException $message ) {
-			echo $message->getMessage();
-		}
-	}
+        try {
+            $dsn = "mysql:host={$host_name};port={$port};dbname={$db_name}";
+            $this->db = new PDO($dsn, $user_name, $password);
+
+            // Set PDO options
+            $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // Enable exception mode for errors
+            $this->db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC); // Set default fetch mode to associative array
+
+            echo "Connection established successfully!";
+        } catch (PDOException $e) {
+            echo "Connection failed: " . $e->getMessage();
+        }
+    }
+
+    // Function to return the database connection
+    public function getConnection()
+    {
+        return $this->db;
+    }
+}
+
+// Example usage
+try {
+    $dbConnector = new DatabaseConnector();
+    $connection = $dbConnector->getConnection();
+    // You can now use $connection to execute queries
+} catch (Exception $e) {
+    echo "Error: " . $e->getMessage();
+}
 
 /* ---------------------- test_form_input_data ----------------------------------- */
 	
