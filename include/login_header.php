@@ -15,18 +15,6 @@
 
 <body>
 
-    <!-- /*
-
-Author: MH RONY
-CompunyName: Code Camp BD
-Facebook Profile: https://www.facebook.com/mh.rony.dhanvi
-GitHub Link: https://github.com/dev-mhrony
-Youtube Channel: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-Personal Website: https://developerrony.com
-Video Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-
-
-*/ -->
 
 
 
