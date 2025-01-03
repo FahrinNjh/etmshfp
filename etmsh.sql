@@ -11,7 +11,6 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
-
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
@@ -32,7 +31,8 @@ CREATE TABLE `attendance_info` (
   `atn_user_id` int(20) NOT NULL,
   `in_time` varchar(200) DEFAULT NULL,
   `out_time` varchar(150) DEFAULT NULL,
-  `total_duration` varchar(100) DEFAULT NULL
+  `total_duration` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`aten_id`) -- Tetapkan primary key hanya di sini
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
@@ -57,7 +57,8 @@ CREATE TABLE `task_info` (
   `t_start_time` varchar(100) DEFAULT NULL,
   `t_end_time` varchar(100) DEFAULT NULL,
   `t_user_id` int(20) NOT NULL,
-  `status` int(11) NOT NULL DEFAULT 0 COMMENT '0 = incomplete, 1 = In progress, 2 = complete'
+  `status` int(11) NOT NULL DEFAULT 0 COMMENT '0 = incomplete, 1 = In progress, 2 = complete',
+  PRIMARY KEY (`task_id`) -- Tetapkan primary key hanya di sini
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
@@ -80,7 +81,8 @@ CREATE TABLE `tbl_admin` (
   `email` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
   `temp_password` varchar(100) DEFAULT NULL,
-  `user_role` int(10) NOT NULL
+  `user_role` int(10) NOT NULL,
+  PRIMARY KEY (`user_id`) -- Tetapkan primary key hanya di sini
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
@@ -94,49 +96,19 @@ INSERT INTO `tbl_admin` (`user_id`, `fullname`, `username`, `email`, `password`,
 (30, 'MaulanaFurqon', 'alan', 'maulana@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', '', 2),
 (31, 'MuhammadRaffi', 'raffi', 'raffi@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', '', 2);
 
---
--- Indexes for dumped tables
---
+-- --------------------------------------------------------
 
---
--- Indeks untuk tabel `attendance_info`
---
-ALTER TABLE `attendance_info`
-  ADD PRIMARY KEY (`aten_id`);
-
---
--- Indeks untuk tabel `task_info`
---
-ALTER TABLE `task_info`
-  ADD PRIMARY KEY (`task_id`);
-
---
--- Indeks untuk tabel `tbl_admin`
---
-ALTER TABLE `tbl_admin`
-  ADD PRIMARY KEY (`user_id`);
-
---
 -- AUTO_INCREMENT untuk tabel yang dibuang
---
 
---
--- AUTO_INCREMENT untuk tabel `attendance_info`
---
 ALTER TABLE `attendance_info`
   MODIFY `aten_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
---
--- AUTO_INCREMENT untuk tabel `task_info`
---
 ALTER TABLE `task_info`
   MODIFY `task_id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
---
--- AUTO_INCREMENT untuk tabel `tbl_admin`
---
 ALTER TABLE `tbl_admin`
   MODIFY `user_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
