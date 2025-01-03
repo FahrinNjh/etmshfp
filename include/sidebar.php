@@ -26,11 +26,14 @@
             return false;
         }
     }
-*/
+
+
     </script>
 </head>
 
 <body>
+
+
 
     <nav class="navbar navbar-inverse sidebar navbar-fixed-top" role="navigation">
         <div class="container-fluid">
@@ -42,7 +45,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="task-info.php"><span style="color: #d4ab3a; font-weight: bold;"></span></a>
+                <a class="navbar-brand" href="task-info.php"><span style="color: #d4ab3a; font-weight: bold;">ETMS</span></a>
             </div>
 
             <?php
@@ -50,7 +53,7 @@
      if($user_role == 1){
     ?>
 
-
+ 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-nav-custom">
@@ -81,11 +84,12 @@
 
     ?>
 
-
+ 
 
 
         </div>
     </nav>
+
 
 
     <div class="main">
