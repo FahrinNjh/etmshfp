@@ -1,16 +1,5 @@
 <?php
-/*
 
-Author: MH RONY
-CompunyName: Code Camp BD
-Facebook Profile: https://www.facebook.com/mh.rony.dhanvi
-GitHub Link: https://github.com/dev-mhrony
-Youtube Channel: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-Personal Website: https://developerrony.com
-Video Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-
-
-*/
 class Admin_Class
 {	
 
@@ -18,13 +7,14 @@ class Admin_Class
 
 	public function __construct()
 	{ 
-        $host_name='localhost';
+        	$host_name='localhost';
 		$user_name='root';
 		$password='';
 		$db_name='etmsh';
+		$port='3308';
 
 		try{
-			$connection=new PDO("mysql:host={$host_name}; dbname={$db_name}", $user_name,  $password);
+			$connection=new PDO("mysql:host={$host_name}; dbname={$db_name}", $user_name,  $password, $port);
 			$this->db = $connection; // connection established
 		} catch (PDOException $message ) {
 			echo $message->getMessage();
@@ -40,18 +30,6 @@ class Admin_Class
 	return $data;
 	}
 
- /*
-
-Author: MH RONY
-CompunyName: Code Camp BD
-Facebook Profile: https://www.facebook.com/mh.rony.dhanvi
-GitHub Link: https://github.com/dev-mhrony
-Youtube Channel: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-Personal Website: https://developerrony.com
-Video Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-
-
-*/
 /* ---------------------- Admin Login Check ----------------------------------- */
 
     public function admin_login_check($data) {
@@ -91,18 +69,6 @@ Video Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
 		
     }
 
-/*
-
-Author: MH RONY
-CompunyName: Code Camp BD
-Facebook Profile: https://www.facebook.com/mh.rony.dhanvi
-GitHub Link: https://github.com/dev-mhrony
-Youtube Channel: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-Personal Website: https://developerrony.com
-Video Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-
-
-*/
 
     public function change_password_for_employee($data){
     	$password  = $this->test_form_input_data($data['password']);
@@ -149,18 +115,6 @@ Video Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
 
 		
     }
-/*
-
-Author: MH RONY
-CompunyName: Code Camp BD
-Facebook Profile: https://www.facebook.com/mh.rony.dhanvi
-GitHub Link: https://github.com/dev-mhrony
-Youtube Channel: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-Personal Website: https://developerrony.com
-Video Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-
-
-*/
 
 /* -------------------- Admin Logout ----------------------------------- */
 
@@ -223,18 +177,7 @@ Video Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
 		}
 	}
 
-/*
 
-Author: MH RONY
-CompunyName: Code Camp BD
-Facebook Profile: https://www.facebook.com/mh.rony.dhanvi
-GitHub Link: https://github.com/dev-mhrony
-Youtube Channel: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-Personal Website: https://developerrony.com
-Video Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-
-
-*/
 /* ---------update_user_data----------*/
 
 	public function update_user_data($data, $id){
@@ -259,18 +202,6 @@ Video Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
 		}
 	}
 
-/*
-
-Author: MH RONY
-CompunyName: Code Camp BD
-Facebook Profile: https://www.facebook.com/mh.rony.dhanvi
-GitHub Link: https://github.com/dev-mhrony
-Youtube Channel: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-Personal Website: https://developerrony.com
-Video Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-
-
-*/
 /* ------------update_admin_data-------------------- */
 
 	public function update_admin_data($data, $id){
@@ -294,18 +225,7 @@ Video Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
 		}
 	}
 
-/*
 
-Author: MH RONY
-CompunyName: Code Camp BD
-Facebook Profile: https://www.facebook.com/mh.rony.dhanvi
-GitHub Link: https://github.com/dev-mhrony
-Youtube Channel: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-Personal Website: https://developerrony.com
-Video Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-
-
-*/
 /* ------update_user_password------------------*/
 	
 	public function update_user_password($data, $id){
@@ -329,18 +249,7 @@ Video Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
 
 
 
-/*
 
-Author: MH RONY
-CompunyName: Code Camp BD
-Facebook Profile: https://www.facebook.com/mh.rony.dhanvi
-GitHub Link: https://github.com/dev-mhrony
-Youtube Channel: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-Personal Website: https://developerrony.com
-Video Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-
-
-*/
 /* -------------admin_password_change------------*/
 
 	public function admin_password_change($data, $id){
@@ -397,18 +306,6 @@ Video Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
 	}
 
 
-/*
-
-Author: MH RONY
-CompunyName: Code Camp BD
-Facebook Profile: https://www.facebook.com/mh.rony.dhanvi
-GitHub Link: https://github.com/dev-mhrony
-Youtube Channel: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-Personal Website: https://developerrony.com
-Video Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-
-
-*/
 
 	/* =================Task Related===================== */
 
@@ -479,18 +376,7 @@ Video Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
 
 		}
 
-/*
 
-Author: MH RONY
-CompunyName: Code Camp BD
-Facebook Profile: https://www.facebook.com/mh.rony.dhanvi
-GitHub Link: https://github.com/dev-mhrony
-Youtube Channel: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-Personal Website: https://developerrony.com
-Video Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-
-
-*/
 	/* =================Attendance Related===================== */
 	public function add_punch_in($data){
 		// data insert 
@@ -540,18 +426,7 @@ Video Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
 	}
 
 
-/*
 
-Author: MH RONY
-CompunyName: Code Camp BD
-Facebook Profile: https://www.facebook.com/mh.rony.dhanvi
-GitHub Link: https://github.com/dev-mhrony
-Youtube Channel: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-Personal Website: https://developerrony.com
-Video Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-
-
-*/
 	/* --------------------delete_data_by_this_method--------------*/
 
 	public function delete_data_by_this_method($sql,$action_id,$sent_po){
@@ -580,20 +455,6 @@ Video Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
 		}
 	}
 
-
-
-/*
-
-Author: MH RONY
-CompunyName: Code Camp BD
-Facebook Profile: https://www.facebook.com/mh.rony.dhanvi
-GitHub Link: https://github.com/dev-mhrony
-Youtube Channel: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-Personal Website: https://developerrony.com
-Video Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-
-
-*/
 
 }
 ?>
