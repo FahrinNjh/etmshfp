@@ -26,36 +26,11 @@
             return false;
         }
     }
-
-    /*
-
-Author: MH RONY
-CompunyName: Code Camp BD
-Facebook Profile: https://www.facebook.com/mh.rony.dhanvi
-GitHub Link: https://github.com/dev-mhrony
-Youtube Channel: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-Personal Website: https://developerrony.com
-Video Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-
-
 */
     </script>
 </head>
 
 <body>
-
-    <!-- /*
-
-Author: MH RONY
-CompunyName: Code Camp BD
-Facebook Profile: https://www.facebook.com/mh.rony.dhanvi
-GitHub Link: https://github.com/dev-mhrony
-Youtube Channel: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-Personal Website: https://developerrony.com
-Video Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-
-
-*/ -->
 
     <nav class="navbar navbar-inverse sidebar navbar-fixed-top" role="navigation">
         <div class="container-fluid">
@@ -67,7 +42,7 @@ Video Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="task-info.php"><span style="color: #d4ab3a; font-weight: bold;">Code Camp BD</span></a>
+                <a class="navbar-brand" href="task-info.php"><span style="color: #d4ab3a; font-weight: bold;"></span></a>
             </div>
 
             <?php
@@ -75,18 +50,7 @@ Video Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
      if($user_role == 1){
     ?>
 
-            <!-- /*
 
-Author: MH RONY
-CompunyName: Code Camp BD
-Facebook Profile: https://www.facebook.com/mh.rony.dhanvi
-GitHub Link: https://github.com/dev-mhrony
-Youtube Channel: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-Personal Website: https://developerrony.com
-Video Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-
-
-*/ -->
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-nav-custom">
@@ -98,18 +62,7 @@ Video Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
             </div>
             <?php 
      }else if($user_role == 2){
-/*
 
-Author: MH RONY
-CompunyName: Code Camp BD
-Facebook Profile: https://www.facebook.com/mh.rony.dhanvi
-GitHub Link: https://github.com/dev-mhrony
-Youtube Channel: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-Personal Website: https://developerrony.com
-Video Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-
-
-*/
       ?>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
@@ -128,35 +81,11 @@ Video Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
 
     ?>
 
-            <!-- /*
-
-Author: MH RONY
-CompunyName: Code Camp BD
-Facebook Profile: https://www.facebook.com/mh.rony.dhanvi
-GitHub Link: https://github.com/dev-mhrony
-Youtube Channel: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-Personal Website: https://developerrony.com
-Video Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-
-
-*/ -->
 
 
 
         </div>
     </nav>
 
-    <!-- /*
-
-Author: MH RONY
-CompunyName: Code Camp BD
-Facebook Profile: https://www.facebook.com/mh.rony.dhanvi
-GitHub Link: https://github.com/dev-mhrony
-Youtube Channel: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-Personal Website: https://developerrony.com
-Video Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-
-
-*/ -->
 
     <div class="main">
